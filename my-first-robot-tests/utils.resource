@@ -1,5 +1,4 @@
 *** Settings ***
-Documentation    Test case to execute the login flow
 Library    SeleniumLibrary
 Library    String
 Library    Collections
