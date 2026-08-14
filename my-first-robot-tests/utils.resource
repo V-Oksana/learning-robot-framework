@@ -36,3 +36,8 @@ Get random value from dropdown
     ${random_value}=    Evaluate    random.choice(${all_options})    modules=random
     Select From List By Label    ${list_id}    ${random_value}
     RETURN    ${random_value}
+
+Extract browser error message
+        [Arguments]    ${input_field}
+        ${error_message}=    Execute Javascript    return document.querySelector('input[${input_field}').validationMessage
+        RETURN    ${error_message}
